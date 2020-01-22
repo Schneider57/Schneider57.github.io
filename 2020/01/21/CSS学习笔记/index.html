@@ -19,10 +19,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="CSS学习笔记一、CSS简介CSS，即”Cascading Style Sheet（层叠样式表）“，是用来控制网页的外观的一门技术。 ”HTML是网页的结构，CSS是网页的外观，而JavaScript是页面的行为。“ 二、内容1、CSS的引入方式在HTML中引入CSS共有3种方式： （1）外部样式表；（2）内部样式表；（3）内联样式表； 一、CSS的3种引入方式1、外部样式表1234567&lt;">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzExLTEtMS5wbmc?x-oss-process=image/format,png">
 <meta property="article:published_time" content="2020-01-21T10:53:52.043Z">
-<meta property="article:modified_time" content="2020-01-21T10:51:27.229Z">
+<meta property="article:modified_time" content="2020-01-22T08:01:07.250Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzExLTEtMS5wbmc?x-oss-process=image/format,png">
     
 
     
@@ -199,14 +201,813 @@
 
 
 
-<h5 id="2、内部样式表"><a href="#2、内部样式表" class="headerlink" title="2、内部样式表"></a>2、内部样式表</h5><h5 id="3、内联样式表"><a href="#3、内联样式表" class="headerlink" title="3、内联样式表"></a>3、内联样式表</h5><h3 id="2、元素的id和class"><a href="#2、元素的id和class" class="headerlink" title="2、元素的id和class"></a>2、元素的id和class</h3><h4 id="一、元素的id属性"><a href="#一、元素的id属性" class="headerlink" title="一、元素的id属性"></a>一、元素的id属性</h4><h4 id="二、元素的class属性"><a href="#二、元素的class属性" class="headerlink" title="二、元素的class属性"></a>二、元素的class属性</h4>
+<h5 id="2、内部样式表"><a href="#2、内部样式表" class="headerlink" title="2、内部样式表"></a>2、内部样式表</h5><h5 id="3、内联样式表"><a href="#3、内联样式表" class="headerlink" title="3、内联样式表"></a>3、内联样式表</h5><h3 id="2、元素的id和class"><a href="#2、元素的id和class" class="headerlink" title="2、元素的id和class"></a>2、元素的id和class</h3><h4 id="一、元素的id属性"><a href="#一、元素的id属性" class="headerlink" title="一、元素的id属性"></a>一、元素的id属性</h4><h4 id="二、元素的class属性"><a href="#二、元素的class属性" class="headerlink" title="二、元素的class属性"></a>二、元素的class属性</h4><h3 id="4、文本样式总结"><a href="#4、文本样式总结" class="headerlink" title="4、文本样式总结"></a>4、文本样式总结</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>font-family</td>
+<td>字体类型</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>字体大小</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>字体粗细</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>字体斜体</td>
+</tr>
+<tr>
+<td>color</td>
+<td>颜色</td>
+</tr>
+</tbody></table>
+<h4 id="一、字体类型font-family"><a href="#一、字体类型font-family" class="headerlink" title="一、字体类型font-family"></a>一、字体类型font-family</h4><p>语法：</p>
+<p>font-family:字体名;</p>
+<p>说明：</p>
+<p>字体名指的是“微软雅黑”、“宋体”、“Times New Roman”等。</p>
+<p>举例：“font-family:微软雅黑;”</p>
+<h4 id="二、字体大小font-size"><a href="#二、字体大小font-size" class="headerlink" title="二、字体大小font-size"></a>二、字体大小font-size</h4><p>语法：</p>
+<p>font-size:像素值;</p>
+<p>说明：</p>
+<p>初学者尽量使用像素来作为单位，因此我们不会在初学者阶段介绍太多的其他单位，比如百分比、em等。</p>
+<p>举例：“font-size:15px;”</p>
+<h4 id="三、字体颜色color"><a href="#三、字体颜色color" class="headerlink" title="三、字体颜色color"></a>三、字体颜色color</h4><p>语法：color:关键字/颜色值;</p>
+<p>说明：</p>
+<p>color共有2种取值，一种是关键字取值，例如“color:red;”；另外一种是十六进制颜色值，例如“color:#F1F1F1;”。对于十六进制颜色值，我们可以使用“在线调色板”选取你喜欢的颜色。</p>
+<p>举例：“color:blue;”</p>
+<h4 id="四、字体粗细font-weight"><a href="#四、字体粗细font-weight" class="headerlink" title="四、字体粗细font-weight"></a>四、字体粗细font-weight</h4><p>语法：</p>
+<p>font-weight:取值;</p>
+<p>说明：</p>
+<p>对于中文网页来说，font-weight属性一般仅用到bold、normal这两个属性值完全就可以了，粗细值不建议使用数值（100~900）。</p>
+<p>举例：“font-weight:bold;”</p>
+<h4 id="五、字体斜体font-style"><a href="#五、字体斜体font-style" class="headerlink" title="五、字体斜体font-style"></a>五、字体斜体font-style</h4><p>在CSS中，使用<a href="http://www.lvyestudy.com/les_cj/cj_3.6.aspx" target="_blank" rel="noopener">font-style属性</a>来定义字体倾斜效果。</p>
+<p>语法：</p>
+<p>font-style:取值;</p>
+<p>说明：</p>
+<p>font-style属性的取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>font-style属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认值，正常体</td>
+</tr>
+<tr>
+<td>italic</td>
+<td>斜体，这是一个属性</td>
+</tr>
+<tr>
+<td>oblique</td>
+<td>将字体倾斜，将没有斜体变量（italic）的特殊字体，要应用oblique</td>
+</tr>
+</tbody></table>
+<p>举例：“font-style:italic;”</p>
+<h4 id="六、CSS注释"><a href="#六、CSS注释" class="headerlink" title="六、CSS注释"></a>六、CSS注释</h4><p>语法：</p>
+<p>/* 注释的内容 */</p>
+<p>说明：</p>
+<p>“/* ”表示注释的开始，“ */”表示注释的结束。</p>
+<h3 id="5、文本样式总结"><a href="#5、文本样式总结" class="headerlink" title="5、文本样式总结"></a>5、文本样式总结</h3><h4 id="一、CSS段落属性"><a href="#一、CSS段落属性" class="headerlink" title="一、CSS段落属性"></a>一、CSS段落属性</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>text-decoration</td>
+<td>下划线、删除线、顶划线</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>文本大小写</td>
+</tr>
+<tr>
+<td>font-varient</td>
+<td>将英文文本转换为“小型”大写字母</td>
+</tr>
+<tr>
+<td>font-indent</td>
+<td>段落首行缩进</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>文本水平对齐方式</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>行高</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>字距</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>词距</td>
+</tr>
+</tbody></table>
+<h5 id="1、text-decoration"><a href="#1、text-decoration" class="headerlink" title="1、text-decoration"></a>1、text-decoration</h5><p>在CSS中，使用<a href="http://www.lvyestudy.com/les_cj/cj_4.2.aspx" target="_blank" rel="noopener">text-decoration属性</a>来定义字体下划线、删除线和顶划线。</p>
+<p>语法：</p>
+<p>text-decoration:属性值;</p>
+<p>说明：</p>
+<p>text-decoration属性取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>text-decoration属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>line-through</td>
+<td>删除线</td>
+</tr>
+<tr>
+<td>overline</td>
+<td>顶划线</td>
+</tr>
+</tbody></table>
+<p>使用“text-decoration:none”这个属性值可以去除a标签的默认样式。</p>
+<p>学了这个属性之后，我们应该摒弃HTML入门中学习到的<s>标签（删除线）和<u>标签（下划线）。</p>
+<h5 id="2、text-transform"><a href="#2、text-transform" class="headerlink" title="2、text-transform"></a>2、text-transform</h5><p>在CSS中，使用<a href="http://www.lvyestudy.com/les_cj/cj_4.3.aspx" target="_blank" rel="noopener">text-transform属性</a>来转换文本的大小写，这个是针对英文而言，因为中文不存在大小写之分。</p>
+<p>语法：</p>
+<p>text-transform:属性值;</p>
+<p>说明：</p>
+<p>text-transform属性取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>text-transform属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>默认值，无转换发生</td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td>转换成大写</td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td>转换成小写</td>
+</tr>
+<tr>
+<td>capitalize</td>
+<td>将每个英文单词的首字母转换成大写，其余无转换发生</td>
+</tr>
+</tbody></table>
+<h5 id="3、font-variant"><a href="#3、font-variant" class="headerlink" title="3、font-variant"></a>3、font-variant</h5><p>使用<a href="http://www.lvyestudy.com/les_cj/cj_4.4.aspx" target="_blank" rel="noopener">font-variant属性</a>只有一个作用：把文本设置成小型大写字母，这也是针对英文而言，因为中文不存在大小写之分。</p>
+<p>语法：</p>
+<p>font-variant：normal/small-caps;</p>
+<p>说明：</p>
+<p>font-variant属性取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>font-variant属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认值，正常效果</td>
+</tr>
+<tr>
+<td>small-caps</td>
+<td>小型大写字幕的字体</td>
+</tr>
+</tbody></table>
+<h5 id="4、text-indent"><a href="#4、text-indent" class="headerlink" title="4、text-indent"></a>4、text-indent</h5><p>我们可以使用CSS的text-indent属性来控制文本首行的缩进。</p>
+<p>语法：</p>
+<p>text-indent:像素值;</p>
+<p>说明：</p>
+<p>在CSS初学阶段，全部都是使用像素作单位，在CSS进阶阶段我们会深入讲解其他CSS单位。</p>
+<h5 id="5、text-align"><a href="#5、text-align" class="headerlink" title="5、text-align"></a>5、text-align</h5><p>在CSS中，使用text-align属性控制文本的水平方向的对齐方式：左对齐、居中对齐、右对齐。</p>
+<p>语法：</p>
+<p>text-align:属性值;</p>
+<p>说明：</p>
+<p>text-align属性取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>text-align属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>默认值，左对齐</td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中对齐</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右对齐</td>
+</tr>
+</tbody></table>
+<p> text-align属性只能针对文本文字和<img>标签，对其他标签无效。 </p>
+<h5 id="6、line-height"><a href="#6、line-height" class="headerlink" title="6、line-height"></a>6、line-height</h5><p>line-height属性指的是行高，而不是行间距。</p>
+<p>语法：</p>
+<p>line-height:像素值;</p>
+<p>说明：</p>
+<p>在CSS初学者阶段，我们都是采用像素做单位。</p>
+<h5 id="7、letter-spacing"><a href="#7、letter-spacing" class="headerlink" title="7、letter-spacing"></a>7、letter-spacing</h5><p>语法：</p>
+<p>letter-spacing:像素值;</p>
+<p>说明：</p>
+<p>letter-spacing控制的是字间距，每一个中文文字作为一个“字”，而每一个英文字母也作为一个“字”！大家要细心留意一下。</p>
+<p>默认情况下，letter-spacing我们几乎都用不上，我们直接采用浏览器默认样式就可以了。大家完全可以忽略掉这个属性。</p>
+<h5 id="8、word-spacing"><a href="#8、word-spacing" class="headerlink" title="8、word-spacing"></a>8、word-spacing</h5><p>语法：</p>
+<p>word-spacing:像素值;</p>
+<p>说明：</p>
+<p>定义词间距，以空格为基准进行调节，如果多个单词被连在一起，则被word-spacing视为一个单词；如果汉字被空格分隔，则分隔的多个汉字就被视为不同的单词，word-spacing属性此时有效。</p>
+<h3 id="6、边框样式"><a href="#6、边框样式" class="headerlink" title="6、边框样式"></a>6、边框样式</h3><h4 id="一、边框属性"><a href="#一、边框属性" class="headerlink" title="一、边框属性"></a>一、边框属性</h4><p>要设置一个元素的边框必须要设置以下3个方面：</p>
+<ul>
+<li>边框的宽度；</li>
+<li>边框的外观（实线，或者虚线）；</li>
+<li>边框的颜色；</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>border-width</td>
+<td>边框的宽度</td>
+</tr>
+<tr>
+<td>border-style</td>
+<td>边框的外观</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>边框的颜色</td>
+</tr>
+</tbody></table>
+<h5 id="1、border-width"><a href="#1、border-width" class="headerlink" title="1、border-width"></a>1、border-width</h5><p>语法：</p>
+<p>border-width:像素值;</p>
+<p>说明：</p>
+<p>在CSS初学者阶段，我们都是建议采用像素做单位。</p>
+<h5 id="2、border-style"><a href="#2、border-style" class="headerlink" title="2、border-style"></a>2、border-style</h5><p>border-style属性用于设置边框的外观，例如实线边框和虚线边框。</p>
+<p>语法：</p>
+<p>border-style:属性值;</p>
+<p>说明：</p>
+<p>虽然border-style属性值很多，但是大部分我们都用不上。一般情况下，我们用到solid和dashed这两个属性值就够了，别浪费时间去记忆其他属性值。</p>
+<h5 id="3、border-color"><a href="#3、border-color" class="headerlink" title="3、border-color"></a>3、border-color</h5><p>border-color属性用来定义边框的颜色。</p>
+<p>语法：</p>
+<p>border-color:颜色值;</p>
+<p>说明：</p>
+<p>对于颜色的取值，请使用前端神器“<a href="http://www.lvyestudy.com/tools/color_picker.aspx" target="_blank" rel="noopener">在线调色板</a>”来选取。 </p>
+<h4 id="二、边框属性简洁写法"><a href="#二、边框属性简洁写法" class="headerlink" title="二、边框属性简洁写法"></a>二、边框属性简洁写法</h4><p>设置一个元素的边框就要设置3个属性：border-width、border-style和border-color。如下： </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">border-width:1px;</span><br><span class="line">border-style:solid;</span><br><span class="line">border-color:gray;</span><br></pre></td></tr></table></figure>
+
+<p> 这种写法费时费力，导致代码量多。因此我们边框CSS样式有一个简洁的写法： </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border:1px solid gray;</span><br></pre></td></tr></table></figure>
+
+<h4 id="三、CSS边框局部样式"><a href="#三、CSS边框局部样式" class="headerlink" title="三、CSS边框局部样式"></a>三、CSS边框局部样式</h4><p> 在CSS中，我们可以分别针对上下左右四条边框设置单独的样式。 </p>
+<h5 id="1、上边框border-top"><a href="#1、上边框border-top" class="headerlink" title="1、上边框border-top"></a>1、上边框border-top</h5><p> 简洁写法：border-top:1px solid red; </p>
+<h5 id="2、下边框border-bottom"><a href="#2、下边框border-bottom" class="headerlink" title="2、下边框border-bottom"></a>2、下边框border-bottom</h5><p> 简洁写法：border-bottom:1px solid orange; </p>
+<h5 id="3、左边框border-left"><a href="#3、左边框border-left" class="headerlink" title="3、左边框border-left"></a>3、左边框border-left</h5><p> 简洁写法：border-left:1px solid blue; </p>
+<h5 id="4、右边框border-right"><a href="#4、右边框border-right" class="headerlink" title="4、右边框border-right"></a>4、右边框border-right</h5><p> 简洁写法：border-right:1px solid red; </p>
+<h3 id="7、背景样式概述"><a href="#7、背景样式概述" class="headerlink" title="7、背景样式概述"></a>7、背景样式概述</h3><h4 id="一、CSS背景样式概述"><a href="#一、CSS背景样式概述" class="headerlink" title="一、CSS背景样式概述"></a>一、CSS背景样式概述</h4><p>在CSS中，背景样式主要包括背景颜色和背景图像。在传统的布局中，一般使用HTML的background属性为<body>、<table>和<td>等几个少数的标签定义背景图像，然后使用bgcolor属性为它们定义背景颜色。</p>
+<p>但是随着Web2.0时代的到来，传统布局的方式已经满足不了设计者的需求。如今的背景样式不再使用HTML属性来定义。大家记得喔，不要再使用HTML的bgcolor这些属性了，现在几乎全部都是使用CSS的background属性来控制元素的背景颜色和背景图像。</p>
+<h5 id="1、背景颜色"><a href="#1、背景颜色" class="headerlink" title="1、背景颜色"></a>1、背景颜色</h5><p>在CSS中，使用background-color属性来控制元素的背景颜色。</p>
+<h5 id="2、背景图像"><a href="#2、背景图像" class="headerlink" title="2、背景图像"></a>2、背景图像</h5><p>在CSS中，为元素设置背景图像，往往涉及到以下属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background-image</td>
+<td>定义背景图像的路径，这样图片才能显示</td>
+</tr>
+<tr>
+<td>background-repead</td>
+<td>定义背景图像显示方式，例如纵向平铺、横向平铺</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>定义背景图像在元素哪个位置</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>定义背景图像是否随内容而滚动</td>
+</tr>
+</tbody></table>
+<h4 id="二、背景颜色background-color"><a href="#二、背景颜色background-color" class="headerlink" title="二、背景颜色background-color"></a>二、背景颜色background-color</h4><h5 id="1、background-color属性"><a href="#1、background-color属性" class="headerlink" title="1、background-color属性"></a>1、background-color属性</h5><p>在CSS中，使用background-color属性来定义元素的背景颜色。</p>
+<p>语法：</p>
+<p>background-color:颜色值;</p>
+<p>说明：</p>
+<p>颜色值是一个关键字或一个16进制的RGB值。关键字指的就是颜色的英文名称，如red、blue、green等。所谓的16进制RGB值指的就是类似“#FBF9D0”这种形式的值。对于颜色值的获取，可以使用绿叶学习网开发的“在线调色板”来获取，非常的方便。</p>
+<h5 id="2、color和background-color区别"><a href="#2、color和background-color区别" class="headerlink" title="2、color和background-color区别"></a>2、color和background-color区别</h5><h4 id="三、背景图像概述"><a href="#三、背景图像概述" class="headerlink" title="三、背景图像概述"></a>三、背景图像概述</h4><h4 id="四、background-image属性"><a href="#四、background-image属性" class="headerlink" title="四、background-image属性"></a>四、background-image属性</h4><p>在CSS中，使用background-image属性来定义元素的背景图片。</p>
+<p>语法：</p>
+<p>background-image:url(“图像地址”);</p>
+<p>说明：</p>
+<p>图像地址可以是相对地址，也可以是绝对地址。请看“<a href="http://www.lvyestudy.com/les_hj/hj_7.2.aspx" target="_blank" rel="noopener">相对地址和绝对地址</a>”。</p>
+<h4 id="五、background-repeat属性"><a href="#五、background-repeat属性" class="headerlink" title="五、background-repeat属性"></a>五、background-repeat属性</h4><p>在CSS中，使用background-repeat属性可以设置背景图像是否平铺，并且可以设置如何平铺。</p>
+<p>语法：</p>
+<p>background-repeat:取值;</p>
+<p>说明：</p>
+<p>background-repeat属性取值如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>no-repeat</td>
+<td>表示不平铺</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>默认值，表示在水平方向（x轴）和垂直方向（y轴）同时平铺</td>
+</tr>
+<tr>
+<td>repeat-x</td>
+<td>表示在水平方向（x轴）平铺</td>
+</tr>
+<tr>
+<td>repeat-y</td>
+<td>表示在垂直方向（y轴）平铺</td>
+</tr>
+</tbody></table>
+<h4 id="六、background-position属性"><a href="#六、background-position属性" class="headerlink" title="六、background-position属性"></a>六、background-position属性</h4><p>背景位置属性用于设置背景图像的位置，这个属性只能应用于块级元素和替换元素。其中替换元素包括img、input、textarea、select和object。</p>
+<p>语法：</p>
+<p>background-positon:像素值/关键字;</p>
+<p>说明：</p>
+<p>语法中的取值包括两种，一种是采用像素值，另一种是关键字描述。</p>
+<h5 id="1、background-position取值为“像素值”"><a href="#1、background-position取值为“像素值”" class="headerlink" title="1、background-position取值为“像素值”"></a>1、background-position取值为“像素值”</h5><h5 id="2、background-position取值为“关键字”"><a href="#2、background-position取值为“关键字”" class="headerlink" title="2、background-position取值为“关键字”"></a>2、background-position取值为“关键字”</h5><p> 当background-position取值为关键字时，也需要设置水平方向和垂直方向的值，只不过值不是使用px为单位的数值，而是使用关键字代替。 </p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top left</td>
+<td>左上</td>
+</tr>
+<tr>
+<td>top center</td>
+<td>靠上居中</td>
+</tr>
+<tr>
+<td>top right</td>
+<td>右上</td>
+</tr>
+<tr>
+<td>left center</td>
+<td>靠左居中</td>
+</tr>
+<tr>
+<td>center center</td>
+<td>正中</td>
+</tr>
+<tr>
+<td>right center</td>
+<td>靠右居中</td>
+</tr>
+<tr>
+<td>bottom left</td>
+<td>左下</td>
+</tr>
+<tr>
+<td>bottom center</td>
+<td>靠下居中</td>
+</tr>
+<tr>
+<td>bottom right</td>
+<td>右下</td>
+</tr>
+</tbody></table>
+<p>分析：</p>
+<p>“background-position:right center;”中“right center;”表示水平方向在右边（right），垂直方向在中间（center）。还有，由于图片是gif格式的动态图片，在浏览器还能看到图片在动。</p>
+<h4 id="七、background-attachment属性"><a href="#七、background-attachment属性" class="headerlink" title="七、background-attachment属性"></a>七、background-attachment属性</h4><p>在CSS中，使用背景附件属性background-attachment可以设置背景图像是随对象滚动还是固定不动。</p>
+<p>语法：</p>
+<p>background-attachment:scroll/fixed;</p>
+<p>说明：</p>
+<p>background-attachment 属性只有2个属性值。scroll表示背景图像随对象滚动而滚动，是默认选项；fixed表示背景图像固定在页面不动，只有其他的内容随滚动条滚动。<br>在IE或者360中设置background-attachment之后不能设置background-position属性，不然图片没办法在浏览器显示。大家可以测试一下google浏览器、Firefox浏览器。 </p>
+<h3 id="8、超链接样式"><a href="#8、超链接样式" class="headerlink" title="8、超链接样式"></a>8、超链接样式</h3><h4 id="一、超链接伪类简介"><a href="#一、超链接伪类简介" class="headerlink" title="一、超链接伪类简介"></a>一、超链接伪类简介</h4><h5 id="1、如何去除超链接下划线"><a href="#1、如何去除超链接下划线" class="headerlink" title="1、如何去除超链接下划线"></a>1、如何去除超链接下划线</h5><p>超链接默认情况下带有下划线，看起来挺难看的，而且用户体验也不好。在CSS中，一般使用“text-decoration:none”来去除超链接下划线，我们在“下划线、删除线和顶划线”这一节已经详细讲解了text-decoration属性。</p>
+<p>语法：</p>
+<p>text-decoration:none;</p>
+<h5 id="2、如何定义超链接伪类"><a href="#2、如何定义超链接伪类" class="headerlink" title="2、如何定义超链接伪类"></a>2、如何定义超链接伪类</h5><p>在CSS中，我们使用超链接伪类来定义超链接在不同时期的不同样式。</p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:link&#123;CSS样式&#125;</span><br><span class="line">a:visited&#123;CSS样式&#125;</span><br><span class="line">a:hover&#123;CSS样式&#125;</span><br><span class="line">a:actived&#123;CSS样式&#125;</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a:link</td>
+<td>定义a元素未访问时的样式</td>
+</tr>
+<tr>
+<td>a:visited</td>
+<td>定义a元素访问后的样式</td>
+</tr>
+<tr>
+<td>a:hover</td>
+<td>定义鼠标经过显示的样式</td>
+</tr>
+<tr>
+<td>a:actived</td>
+<td>定义鼠标单击激活时的样式</td>
+</tr>
+</tbody></table>
+<h5 id="3、深入了解超链接伪类"><a href="#3、深入了解超链接伪类" class="headerlink" title="3、深入了解超链接伪类"></a>3、深入了解超链接伪类</h5><p> 一般情况下，我们只用到2种状态：未访问状态和鼠标经过状态。 </p>
+<p> 未访问状态，我们直接在a标签定义就行了，没必要使用“a:link”。 </p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a&#123;CSS样式&#125;</span><br><span class="line">a:hover&#123;CSS样式&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、深入了解-hover伪类"><a href="#二、深入了解-hover伪类" class="headerlink" title="二、深入了解:hover伪类"></a>二、深入了解:hover伪类</h4><p> “:hover”伪类可以定义任何一个元素在鼠标经过时的样式。</p>
+<p>语法：</p>
+<p>元素:hover{}</p>
+<p>说明：</p>
+<p>“元素”可以是任意的<a href="http://www.lvyestudy.com/les_hj/hj_4.9.aspx" target="_blank" rel="noopener">块元素和行内元素</a>。</p>
+<h4 id="三、鼠标样式"><a href="#三、鼠标样式" class="headerlink" title="三、鼠标样式"></a>三、鼠标样式</h4><h5 id="1、cursor属性"><a href="#1、cursor属性" class="headerlink" title="1、cursor属性"></a>1、cursor属性</h5><p>在CSS中，使用cursor属性来定义鼠标的样式。</p>
+<p>语法：</p>
+<p>cursor:属性值;</p>
+<p>在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上。一般情况下，我们只需要采用浏览器默认的鼠标样式就可以了，如果实在特别需要的时候可以用“cursor:pointer;”。对于cursor的其他属性值，我们一般用不上。 </p>
+<h3 id="9、图片样式"><a href="#9、图片样式" class="headerlink" title="9、图片样式"></a>9、图片样式</h3><h4 id="一、图片大小width和height"><a href="#一、图片大小width和height" class="headerlink" title="一、图片大小width和height"></a>一、图片大小width和height</h4><p> 在CSS中，对于图片的大小，我们也是用width和height来定义。 </p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">width:像素值;</span><br><span class="line">height:像素值;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、图片边框border"><a href="#二、图片边框border" class="headerlink" title="二、图片边框border"></a>二、图片边框border</h4><p>在“<a href="http://www.lvyestudy.com/les_cj/cj_5.2.aspx" target="_blank" rel="noopener">CSS边框border</a>”这一节我们详细讲解了边框border属性。在CSS中，对于图片的边框，我们也是使用border属性来定义。 </p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">border-width:像素值;</span><br><span class="line">border-style:属性值;</span><br><span class="line">border-color:颜色值;</span><br></pre></td></tr></table></figure>
+
+<p> 注：或者使用border简洁写法，如“border:1px solid gray;”。 </p>
+<h4 id="三、图片水平对齐text-align"><a href="#三、图片水平对齐text-align" class="headerlink" title="三、图片水平对齐text-align"></a>三、图片水平对齐text-align</h4><p>在“文本水平对齐text-align”这一节我们详细讲解了text-align属性。大家请记住，text-align一般只用在两个地方：文本水平对齐和图片水平对齐。也就是说，text-align只对文本和img标签有效，对其他标签无效。</p>
+<p>语法：</p>
+<p>text-align:属性值;</p>
+<p>说明：</p>
+<p>text-align属性取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>text-align属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>默认值，左对齐</td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中对齐</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右对齐</td>
+</tr>
+</tbody></table>
+<h4 id="四、CSS图片垂直对齐vertical-align属性"><a href="#四、CSS图片垂直对齐vertical-align属性" class="headerlink" title="四、CSS图片垂直对齐vertical-align属性"></a>四、CSS图片垂直对齐vertical-align属性</h4><p>在CSS中，我们可以使用vertical-align属性来定义图片的垂直对齐方式。</p>
+<p>语法：</p>
+<p>vertical-align:属性值;</p>
+<p>说明：</p>
+<p>vertical即“垂直的”，align即“使排整齐”。大家记忆CSS属性要跟在HTML入门教程中记忆HTML标签一样，根据英文意思去记忆就事半功倍了。</p>
+<p>vertical-align属性取值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>vertical-align属性取值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top</td>
+<td>顶部对齐</td>
+</tr>
+<tr>
+<td>middle</td>
+<td>中部对齐</td>
+</tr>
+<tr>
+<td>baseline</td>
+<td>基线对齐</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部对齐</td>
+</tr>
+</tbody></table>
+<h4 id="五、文字环绕效果-初识float"><a href="#五、文字环绕效果-初识float" class="headerlink" title="五、文字环绕效果-初识float"></a>五、文字环绕效果-初识float</h4><h5 id="1、float属性"><a href="#1、float属性" class="headerlink" title="1、float属性"></a>1、float属性</h5><p>在CSS中，使用浮动属性float可以设置文字在某个元素的周围，它能应用于所有的元素。</p>
+<p>语法：</p>
+<p>float:取值;</p>
+<p>说明：</p>
+<p>float属性的取值很简单也很容易记忆，就2个属性值：</p>
+<table>
+<thead>
+<tr>
+<th>float属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>元素向左浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>元素向右浮动</td>
+</tr>
+</tbody></table>
+<p>默认情况下，元素是不浮动的。这个表忽略“none”和“inherit”这2个属性值。 </p>
+<h5 id="2、设置图片与文字的间距"><a href="#2、设置图片与文字的间距" class="headerlink" title="2、设置图片与文字的间距"></a>2、设置图片与文字的间距</h5><p>文字紧紧环绕在图片周围，如果希望图片本身与文字有一定的距离，只需要给<img>标签添加margin属性即可。margin指的是“外边距”，我们在接下来的“CSS盒子模型”会详细讲解到。</p>
+<p>margin属性包括margin-top（上外边距）、margin-bottom（下外边距）、margin-left（左外边距）、margin-right（右外边距）。</p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">margin-top:像素值;</span><br><span class="line">margin-bottom:像素值;</span><br><span class="line">margin-left:像素值;</span><br><span class="line">margin-right:像素值;</span><br></pre></td></tr></table></figure>
+
+<h3 id="10、列表样式"><a href="#10、列表样式" class="headerlink" title="10、列表样式"></a>10、列表样式</h3><h4 id="一、元素中定义列表项符号list-style-type"><a href="#一、元素中定义列表项符号list-style-type" class="headerlink" title="一、元素中定义列表项符号list-style-type"></a>一、元素中定义列表项符号list-style-type</h4><p>在<a href="http://www.lvyestudy.com/les_hj/html_list.aspx" target="_blank" rel="noopener">HTML入门教程</a>中，<a href="http://www.lvyestudy.com/les_hj/hj_5.2.aspx" target="_blank" rel="noopener">有序列表</a>和<a href="http://www.lvyestudy.com/les_hj/hj_5.3.aspx" target="_blank" rel="noopener">无序列表</a>的列表项符号都是使用type属性来定义的。 </p>
+<h4 id="二、CSS中定义列表项符号"><a href="#二、CSS中定义列表项符号" class="headerlink" title="二、CSS中定义列表项符号"></a>二、CSS中定义列表项符号</h4><p>在CSS中，不管是有序列表还是无序列表，都统一使用list-style-type属性来定义列表项符号。</p>
+<p>语法：</p>
+<p>list-style-type:属性值;</p>
+<p>说明：</p>
+<p>list-style-type属性取值如下：</p>
+<table>
+<thead>
+<tr>
+<th>list-style-type属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>decimal</td>
+<td>默认值，数字1、2、3……</td>
+</tr>
+<tr>
+<td>lower-roman</td>
+<td>小写罗马数字i、ii、iii……</td>
+</tr>
+<tr>
+<td>upper-roman</td>
+<td>大写罗马数字I、II、III……</td>
+</tr>
+<tr>
+<td>lower-alpha</td>
+<td>小写英文字母a、b、c……</td>
+</tr>
+<tr>
+<td>upper-alpha</td>
+<td>大写英文字母A、B、C……</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>list-style-type属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>disc</td>
+<td>默认值，实心圆“●”</td>
+</tr>
+<tr>
+<td>circle</td>
+<td>空心圆“○”</td>
+</tr>
+<tr>
+<td>square</td>
+<td>实心正方形“■”</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>list-style-type属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>去除列表项符号</td>
+</tr>
+</tbody></table>
+<h4 id="三、自定义列表项符号list-style-image"><a href="#三、自定义列表项符号list-style-image" class="headerlink" title="三、自定义列表项符号list-style-image"></a>三、自定义列表项符号list-style-image</h4><p>在CSS中，我们可以使用list-style-image属性来自定义列表项符号。</p>
+<p>语法：</p>
+<p>list-style-image:url(图像地址);</p>
+<p>说明：</p>
+<p>图像地址可以是相对地址，也可以是绝对地址。</p>
+<h3 id="11、表格样式"><a href="#11、表格样式" class="headerlink" title="11、表格样式"></a>11、表格样式</h3><h4 id="一、表格边框合并border-collapse"><a href="#一、表格边框合并border-collapse" class="headerlink" title="一、表格边框合并border-collapse"></a>一、表格边框合并border-collapse</h4><p>在CSS中，我们可以使用border-collapse属性来去除单元格之间的空隙。</p>
+<p>语法：</p>
+<p>border-collapse:属性值;</p>
+<p>说明：</p>
+<p>border-collapse是表格独有的属性。除了表格，在其他地方是用不上的。</p>
+<p>border-collapse属性取值如下：</p>
+<table>
+<thead>
+<tr>
+<th>border-collapse属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>separate</td>
+<td>默认值，边框分开，不合并</td>
+</tr>
+<tr>
+<td>collapse</td>
+<td>边框合并，如果相邻，则共用一个边框</td>
+</tr>
+</tbody></table>
+<p> separate意思是“分离”，而collapse意思是“折叠，瓦解”。 </p>
+<h4 id="二、表格边框间距border-spacing"><a href="#二、表格边框间距border-spacing" class="headerlink" title="二、表格边框间距border-spacing"></a>二、表格边框间距border-spacing</h4><p>在CSS中，我们使用border-spacing属性来定义表格边框间距。</p>
+<p>语法：</p>
+<p>border-spacing:像素值;</p>
+<p>说明：</p>
+<p>该属性指定单元格边界之间的距离。当只指定了1个像素值时，这个值将作用于横向和纵向上的间距；当指定了2个length值时，第1个作用于横向间距，第2个作用于纵向间距。</p>
+<h4 id="三、表格标题位置caption-side"><a href="#三、表格标题位置caption-side" class="headerlink" title="三、表格标题位置caption-side"></a>三、表格标题位置caption-side</h4><p>在CSS中，我们使用caption-side属性来定义表格标题的位置。</p>
+<p>语法：</p>
+<p>caption-side:属性值;</p>
+<p>说明：</p>
+<p>caption-side属性取值如下：</p>
+<table>
+<thead>
+<tr>
+<th>caption-side属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top</td>
+<td>默认值，标题在顶部</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>标题在底部</td>
+</tr>
+</tbody></table>
+<h3 id="12、CSS盒子模型"><a href="#12、CSS盒子模型" class="headerlink" title="12、CSS盒子模型"></a>12、CSS盒子模型</h3><h4 id="一、CSS盒子模型简介"><a href="#一、CSS盒子模型简介" class="headerlink" title="一、CSS盒子模型简介"></a>一、CSS盒子模型简介</h4><p>在“CSS盒子模型”理论中，所有页面中的元素都可以看成一个盒子，并且占据着一定的页面空间。 </p>
+<p>一个页面由很多这样的盒子组成，这些盒子之间会互相影响，因此掌握盒子模型需要从两个方面来理解：一是理解单独一个盒子的内部结构，二是理解多个盒子之间的相互关系。 </p>
+<p>每个元素都看成一个盒子，盒子模型是由content（内容）、<a href="http://www.lvyestudy.com/les_cj/cj_.11.4aspx" target="_blank" rel="noopener">padding</a>（内边距）、<a href="http://www.lvyestudy.com/les_cj/cj_11.5.aspx" target="_blank" rel="noopener">margin</a>（外边距）和border（边框）这四个属性组成的。此外，在盒子模型中，还有宽度width和高度height两大辅助性属性。 </p>
+<p>记住，是所有的元素都可以看出一个盒子！ </p>
+<p>下图为一个CSS盒子模型的内部结构： </p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzExLTEtMS5wbmc?x-oss-process=image/format,png" alt="CSS盒子模型"></p>
+<p>从上图中我们可以得出盒子模型的属性如下： </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>border</td>
+<td>（边框）元素边框</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>（外边距）用于定义页面中元素与元素之间的距离</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>（内边距）用于定义内容与边框之间的距离，常称为“补白”</td>
+</tr>
+<tr>
+<td>content</td>
+<td>（内容）可以是文字或图片</td>
+</tr>
+</tbody></table>
+<h5 id="1、内容区"><a href="#1、内容区" class="headerlink" title="1、内容区"></a>1、内容区</h5><p>内容区是CSS盒子模型的中心，它呈现了盒子的主要信息内容，这些内容可以是文本、图片等多种类型。内容区是盒子模型必备的组成部分，其他的3部分都是可选的。</p>
+<p>内容区有3个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区而言，并不包括padding部分。</p>
+<p>当内容信息太多时，超出内容区所占范围时，可以使用overflow溢出属性来指定处理方法。对于overflow这个属性，我们在后面会详细讲解到。</p>
+<h5 id="2、内边距"><a href="#2、内边距" class="headerlink" title="2、内边距"></a>2、内边距</h5><p>内边距，指的是内容区和边框之间的空间，可以被看做是内容区的背景区域。</p>
+<p>关于内边距的属性有5种，即padding-top、padding-bottom、padding-left、padding-right以及综合了以上4个方向的简洁内边距属性padding。使用这5种属性可以指定内容区域各方向边框之间的距离。</p>
+<h5 id="3、边框"><a href="#3、边框" class="headerlink" title="3、边框"></a>3、边框</h5><p>在CSS盒子模型中，边框跟我们之前学过的边框是一样的。</p>
+<p>边框属性有border-width、border-style、border-color以及综合了3类属性的快捷边框属性border。</p>
+<p>其中border-width指定边框的宽度，border-style指定边框类型，border-color指定边框的颜色。</p>
+<p>“border-width:1px;border-style:solid;border-color:gray;”等价于“border:1px solid gray;”。</p>
+<h5 id="4、外边距"><a href="#4、外边距" class="headerlink" title="4、外边距"></a>4、外边距</h5><p>外边距，指的是两个盒子之间的距离，它可能是子元素与父元素之间的距离，也可能是兄弟元素之间的距离。</p>
+<p>外边距使得元素之间不必紧凑地连接在一起，是CSS布局的一个重要手段。</p>
+<p>外边距的属性也有5种，即margin-top、margin-bottom、margin-left、margin-right以及综合了以上4个方向的简洁内边距属性margin。</p>
+<p>同时，CSS允许给外边距属性指定负数值，当指定负外边距值时，整个盒子将向指定负值的相反方向移动，以此可以产生盒子的重叠效果。这就是传说中的“负margin技术”。</p>
+<h4 id="二、宽度width和高度height"><a href="#二、宽度width和高度height" class="headerlink" title="二、宽度width和高度height"></a>二、宽度width和高度height</h4><p>从<a href="http://www.lvyestudy.com/les_cj/cj_11.1.aspx" target="_blank" rel="noopener">CSS盒子模型</a>中，我们可以看出，元素的宽度width和高度height是针对内容区而言的，大家要非常清楚这一点。很多初学者容易把补白也认为是内容区的一部分。 </p>
+<p>说明：</p>
+<p>只有块元素能设置width和height，行内元素无法设置width和height。</p>
+<p>如果我们想为span元素（行内元素）也设置高度和宽度，那怎么办呢？在CSS中，可以使用display属性来将行内元素转换为块元素，或者将块元素转换为行内元素。 </p>
+<h4 id="三、边框border"><a href="#三、边框border" class="headerlink" title="三、边框border"></a>三、边框border</h4><p>语法：</p>
+<p>border:像素值 边框类型 颜色值;</p>
+<p>说明：</p>
+<p>两个属性值之间一定要用空格隔开。</p>
+<h4 id="四、内边距padding"><a href="#四、内边距padding" class="headerlink" title="四、内边距padding"></a>四、内边距padding</h4><p> padding写法有3种，分别如下： </p>
+<p>“padding:20px;”表示四个方向的内边距都是20px；</p>
+<p>“padding:20px 40px;”表示padding-top和padding-bottom为20px，padding-right和padding-left为40px。</p>
+<p>“padding:20px 40px 60px 80px;”表示padding-top为20px，padding-right为40px，padding-bottom为60px，padding-left为80px。 按照顺时针方向记忆就可以了。 </p>
+<h4 id="五、外边距margin"><a href="#五、外边距margin" class="headerlink" title="五、外边距margin"></a>五、外边距margin</h4><p>外边距margin，指的是边框到父元素或者同级元素之间的那一部分。 </p>
+<p>margin写法有3种，分别如下： </p>
+<p>margin:20px;”表示四个方向的外边距都是20px；</p>
+<p>“margin:20px 40px;”表示margin-top和margin-bottom为20px，margin-right和margin-left为40px。</p>
+<p>“margin:20px 40px 60px 80px;”表示margin-top为20px，margin-right为40px，margin-bottom为60px，margin-left为80px。按照顺时针方向记忆就可以了。</p>
+<h3 id="13、浮动布局"><a href="#13、浮动布局" class="headerlink" title="13、浮动布局"></a>13、浮动布局</h3><h4 id="一、文档流简介"><a href="#一、文档流简介" class="headerlink" title="一、文档流简介"></a>一、文档流简介</h4><p>什么叫文档流？简单来说，就是元素在页面出现的先后顺序。</p>
+<p>那什么叫“正常文档流”呢？我们先来看一下正常文档流的简单定义：正常文档流，将窗体自上而下分成一行一行，块元素独占一行，相邻行内元素在每行中按从左到右地依次排列元素。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzEyLTEtMS5wbmc?x-oss-process=image/format,png" alt="CSS文档流"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzEyLTEtMi5wbmc?x-oss-process=image/format,png" alt="CSS正常文档流"></p>
+<p>在CSS布局中，我们可以使用浮动或者定位这两种技术来实现“脱离正常文档流”，从而随心所欲地控制着页面的布局。</p>
+<p>“正常文档流”概念以及“脱离文档流的工作原理”在CSS中，也是非常重要的理论。</p>
+<h4 id="二、浮动float简介"><a href="#二、浮动float简介" class="headerlink" title="二、浮动float简介"></a>二、浮动float简介</h4><p>浮动元素会生成一个块级框，而不论它本身是何种元素。</p>
+<p>语法：</p>
+<p>float:取值;</p>
+<p>说明：</p>
+<p>float属性的取值很简单也很容易记忆，就2个属性值：left和right。</p>
+<h4 id="三、清除浮动clear简介"><a href="#三、清除浮动clear简介" class="headerlink" title="三、清除浮动clear简介"></a>三、清除浮动clear简介</h4><p>在CSS中，清除浮动都是在设置左浮动或者右浮动之后的元素内设置。</p>
+<p>语法：</p>
+<p>clear:取值;</p>
+<p>说明：</p>
+<p>clear属性取值如下：</p>
+<table>
+<thead>
+<tr>
+<th>clear属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>清除左浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>清除右浮动</td>
+</tr>
+<tr>
+<td>both</td>
+<td>左右浮动一起清除</td>
+</tr>
+</tbody></table>
+<p> 了使用clear属性来清除浮动，还可以采用“overflow:hidden;”来清除浮动。</p>
+<h3 id="14、定位布局"><a href="#14、定位布局" class="headerlink" title="14、定位布局"></a>14、定位布局</h3><h4 id="一、CSS定位布局简介"><a href="#一、CSS定位布局简介" class="headerlink" title="一、CSS定位布局简介"></a>一、CSS定位布局简介</h4><p>定位的方法有很多种，它们分别是<a href="http://www.lvyestudy.com/les_cj/cj_13.2.aspx" target="_blank" rel="noopener">固定定位</a>（fixed）、<a href="http://www.lvyestudy.com/les_cj/cj_13.3.aspx" target="_blank" rel="noopener">相对定位</a>（relative）、<a href="http://www.lvyestudy.com/les_cj/cj_13.4.aspx" target="_blank" rel="noopener">绝对定位</a>（absolute）和<a href="http://www.lvyestudy.com/les_cj/cj_13.5.aspx" target="_blank" rel="noopener">静态定位</a>（static）。 </p>
+<h4 id="二、CSS固定定位fixed"><a href="#二、CSS固定定位fixed" class="headerlink" title="二、CSS固定定位fixed"></a>二、CSS固定定位fixed</h4><p>当元素的position属性设置为fixed时，这个元素就被固定了，被固定的元素不会随着滚动条的拖动而改变位置。在视野中，固定定位的元素的位置是不会改变的。 </p>
+<p>语法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span><span class="selector-pseudo">:fixed</span>;</span><br><span class="line"><span class="selector-tag">top</span>:像素值;</span><br><span class="line"><span class="selector-tag">bottom</span>:像素值;</span><br><span class="line"><span class="selector-tag">left</span>:像素值;</span><br><span class="line"><span class="selector-tag">right</span>:像素值;</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>“position:fixed;”是结合top、bottom、left和right这4个属性一起使用的，其中“position:fixed;”使得元素成为固定定位元素，接着使用top、bottom、left和right这4个属性来设置元素相对浏览器的位置。</p>
+<p>top、bottom、left和right这4个属性不一定全部都用到。注意，这4个值的参考对象是浏览器的4条边。<br>固定定位其实很简单，就是使用“position:fixed”设置某一个元素为固定定位，接着使用top、bottom、left和right这4个属性来设置一下元素相对浏览器的位置就可以了。固定定位用途也很多，一般用于“回顶部”特效和固定栏目的设置。 </p>
+<h4 id="三、CSS相对定位简介relative"><a href="#三、CSS相对定位简介relative" class="headerlink" title="三、CSS相对定位简介relative"></a>三、CSS相对定位简介relative</h4><p> 采用相对定位的元素，其位置是相对于它的原始位置计算而来的。相对定位是通过将元素从原来的位置向上、向下、向左或者向右移动来定位的。采用相对定位的元素会获得相应的空间。 </p>
+<p>语法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span><span class="selector-pseudo">:relative</span>;</span><br><span class="line"><span class="selector-tag">top</span>:像素值;</span><br><span class="line"><span class="selector-tag">bottom</span>:像素值;</span><br><span class="line"><span class="selector-tag">left</span>:像素值;</span><br><span class="line"><span class="selector-tag">right</span>:像素值;</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>“position:relative;”是结合top、bottom、left和right这4个属性一起使用的，其中“position:relative;”使得元素成为相对定位元素，接着使用top、bottom、left和right这4个属性来设置元素相对原始位置。相对定位的容器浮上来后，其所占的位置仍然留有空位，后面的无定位元素仍然不会“挤上来”。</p>
+<p>在这里要非常清楚这一点：默认情况下，CSS相对定位元素的位置是相对于原始位置而言，而CSS固定定位元素的位置是相对浏览器而言！</p>
+<h4 id="四、CSS绝对定位absolute"><a href="#四、CSS绝对定位absolute" class="headerlink" title="四、CSS绝对定位absolute"></a>四、CSS绝对定位absolute</h4><p>当元素的position属性值为absolute时，这个元素就变成了绝对定位元素。绝对定位在几种定位方法中使用最广泛，这种方法能够很精确地把元素移动到任意你想要的位置。</p>
+<p>一个元素变成了绝对定位元素，这个元素就完全脱离正常文档流了，绝对定位元素的前面或者后面的元素会认为这个元素并不存在，即这个元素浮于其他元素上面，它是独立出来的。<br>语法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span><span class="selector-pseudo">:absolute</span>;</span><br><span class="line"><span class="selector-tag">top</span>:像素值;</span><br><span class="line"><span class="selector-tag">bottom</span>:像素值;</span><br><span class="line"><span class="selector-tag">left</span>:像素值;</span><br><span class="line"><span class="selector-tag">right</span>:像素值;</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>“position:absolute;”是结合top、bottom、left和right这4个属性一起使用的，其中“position:absolute;”使得元素成为绝对定位元素，接着使用top、bottom、left和right这4个属性来设置元素相对浏览器的位置。</p>
+<p>现在，我们暂且可以这样理解：CSS固定定位元素和CSS绝对定位元素的位置是相对于浏览器而言，而CSS相对定位元素的位置是相对原始位置而言。</p>
+<p>大部分人看到这里就会疑惑了，“固定定位元素和绝对定位元素的位置是相对于浏览器而言，而相对定位元素的位置是相对原始位置而言”这句话真的正确吗？不正确！正确的描述要加一个前提→“默认情况下”。 </p>
+<h4 id="五、CSS静态定位static"><a href="#五、CSS静态定位static" class="headerlink" title="五、CSS静态定位static"></a>五、CSS静态定位static</h4><p>如果没有指定元素的position属性值，也就是默认情况下，元素是静态定位。只要是支持position属性的html对象都是默认为static。static是position属性的默认值，它表示块保留在原本应该在的位置，不会重新定位。 </p>
+<p>说白了，平常我们根本就用不到“position:static”，不过呢，如果有时候我们使用javascript来控制元素定位的时候，如果想要使得其他定位方式的元素变成静态定位，就要使用“position:static;”来实现。</p>
+<p>在CSS入门阶段，大家只需要深入学习固定定位（fixed）、相对定位（relative）和绝对定位（absolute）就已经可以走得很远了。</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2020/01/21/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck5nrji8z000374v19cmd3fya" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2020/01/21/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck5phlal30005jsv14rwabjs9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -277,19 +1078,19 @@
             "name": "John Doe"
         },
         "headline": "CSS学习笔记",
-        "image": "http://yoursite.com",
+        "image": "http://yoursite.comhttps://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzExLTEtMS5wbmc?x-oss-process=image/format,png",
         "keywords": "",
         "genre": "",
         "datePublished": "2020-01-21",
         "dateCreated": "2020-01-21",
-        "dateModified": "2020-01-21",
+        "dateModified": "2020-01-22",
         "url": "http://yoursite.com/2020/01/21/CSS学习笔记/",
         "description": "CSS学习笔记一、CSS简介CSS，即”Cascading Style Sheet（层叠样式表）“，是用来控制网页的外观的一门技术。
 ”HTML是网页的结构，CSS是网页的外观，而JavaScript是页面的行为。“
 二、内容1、CSS的引入方式在HTML中引入CSS共有3种方式：
 （1）外部样式表；（2）内部样式表；（3）内联样式表；
 一、CSS的3种引入方式1、外部样式表1234567&lt;",
-        "wordCount": 117
+        "wordCount": 745
     }
 </script>
 
@@ -370,16 +1171,6 @@
         
 <nav id="article-nav">
     
-        <a href="/2020/01/21/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Vue学习笔记
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
     
         <a href="/2020/01/21/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -414,30 +1205,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2020/01/21/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2020/01/21/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="title">Vue学习笔记</a></p>
-                            <p class="item-date"><time datetime="2020-01-21T10:53:52.043Z" itemprop="datePublished">2020-01-21</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2020/01/21/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(https://imgconvert.csdnimg.cn/aHR0cDovL3d3dy5sdnllc3R1ZHkuY29tL0FwcF9pbWFnZXMvbGVzc29uL2NqLzExLTEtMS5wbmc?x-oss-process=image/format,png)" alt="CSS学习笔记" class="thumbnail-image"></span>
     
     
 </a>
@@ -474,6 +1245,26 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2020/01/07/1111/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2020/01/07/1111/" class="title">初遇hexo</a></p>
+                            <p class="item-date"><time datetime="2020-01-07T14:02:17.000Z" itemprop="datePublished">2020-01-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2020/01/07/2222/" class="thumbnail">
     
     
@@ -494,7 +1285,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2020/01/07/1111/" class="thumbnail">
+                            <a href="/2020/01/07/%E5%88%9D%E9%81%87hexo/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -506,7 +1297,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2020/01/07/1111/" class="title">初遇hexo</a></p>
+                            <p class="item-title"><a href="/2020/01/07/%E5%88%9D%E9%81%87hexo/" class="title">初遇hexo</a></p>
                             <p class="item-date"><time datetime="2020-01-07T14:02:17.000Z" itemprop="datePublished">2020-01-07</time></p>
                         </div>
                     </li>
@@ -523,7 +1314,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
